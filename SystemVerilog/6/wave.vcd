@@ -1,0 +1,58 @@
+$date
+	Thu Aug 20 19:16:48 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_target $end
+$scope module dut $end
+$var reg 8 ! target [7:0] $end
+$var integer 32 " count [31:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 # i [31:0] $end
+$upscope $end
+$upscope $end
+$scope task check $end
+$var reg 8 $ target_value [7:0] $end
+$var integer 32 % expected [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10 %
+b11 $
+b1000 #
+b10 "
+b11 !
+$end
+#10
+b1000 #
+b1 "
+b110111 !
+b1 %
+b110111 $
+#20
+b1000 #
+b0 "
+b1010 !
+b0 %
+b1010 $
+#30
+b1 "
+b1000 #
+b1 !
+b1 %
+b1 $
+#40
+b1000 #
+b1 "
+b111 !
+b111 $
+#50
