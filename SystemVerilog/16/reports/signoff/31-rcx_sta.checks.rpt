@@ -1,0 +1,81 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: shift_amt[1] (input port clocked by __VIRTUAL_CLK__)
+Endpoint: data_out[0] (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+                  0.02    0.01    2.01 ^ shift_amt[1] (in)
+     1    0.00                           shift_amt[1] (net)
+                  0.02    0.00    2.01 ^ input7/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.15    0.18    2.19 ^ input7/X (sky130_fd_sc_hd__clkbuf_2)
+     8    0.03                           net7 (net)
+                  0.15    0.00    2.19 ^ _15_/A_N (sky130_fd_sc_hd__and3b_1)
+                  0.05    0.22    2.41 v _15_/X (sky130_fd_sc_hd__and3b_1)
+     2    0.01                           _02_ (net)
+                  0.05    0.00    2.41 v _17_/B1 (sky130_fd_sc_hd__a311o_1)
+                  0.05    0.33    2.74 v _17_/X (sky130_fd_sc_hd__a311o_1)
+     1    0.00                           _04_ (net)
+                  0.05    0.00    2.74 v _19_/B1 (sky130_fd_sc_hd__a22o_1)
+                  0.07    0.22    2.96 v _19_/X (sky130_fd_sc_hd__a22o_1)
+     1    0.01                           net8 (net)
+                  0.07    0.00    2.96 v output8/A (sky130_fd_sc_hd__clkbuf_4)
+                  0.08    0.20    3.16 v output8/X (sky130_fd_sc_hd__clkbuf_4)
+     1    0.03                           data_out[0] (net)
+                  0.08    0.00    3.16 v data_out[0] (out)
+                                  3.16   data arrival time
+
+                  0.00   10.00   10.00   clock __VIRTUAL_CLK__ (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -3.16   data arrival time
+-----------------------------------------------------------------------------
+                                  4.59   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 0 unannotated drivers.
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================

@@ -1,0 +1,11 @@
+# Python generated files
+__pycache__/
+*.pyc
+
+# Cocotb / simulator generated files
+sim/
+sim_build/
+results.xml
+
+# Log files
+*.log

@@ -1,0 +1,8 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module barrel_shifter...
+Warning: Wire barrel_shifter.\data_out [3] is used but has no driver.
+Warning: Wire barrel_shifter.\data_out [2] is used but has no driver.
+Warning: Wire barrel_shifter.\data_out [1] is used but has no driver.
+Warning: Wire barrel_shifter.\data_out [0] is used but has no driver.
+Found and reported 4 problems.

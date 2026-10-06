@@ -1,0 +1,209 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO barrel_shifter
+  CLASS BLOCK ;
+  FOREIGN barrel_shifter ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 100.000 BY 100.000 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 19.115 10.640 20.715 87.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 41.310 10.640 42.910 87.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 63.505 10.640 65.105 87.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 85.700 10.640 87.300 87.280 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 22.900 94.540 24.500 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 41.940 94.540 43.540 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 60.980 94.540 62.580 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 80.020 94.540 81.620 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 15.815 10.640 17.415 87.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 38.010 10.640 39.610 87.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 60.205 10.640 61.805 87.280 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 82.400 10.640 84.000 87.280 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 19.600 94.540 21.200 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 38.640 94.540 40.240 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 57.680 94.540 59.280 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 76.720 94.540 78.320 ;
+    END
+  END VPWR
+  PIN data_in[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.126000 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 74.840 4.000 75.440 ;
+    END
+  END data_in[0]
+  PIN data_in[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 6.840 100.000 7.440 ;
+    END
+  END data_in[1]
+  PIN data_in[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.126000 ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END data_in[2]
+  PIN data_in[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.126000 ;
+    PORT
+      LAYER met2 ;
+        RECT 80.590 96.000 80.870 100.000 ;
+    END
+  END data_in[3]
+  PIN data_out[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 70.930 0.000 71.210 4.000 ;
+    END
+  END data_out[0]
+  PIN data_out[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 37.440 4.000 38.040 ;
+    END
+  END data_out[1]
+  PIN data_out[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 81.640 100.000 82.240 ;
+    END
+  END data_out[2]
+  PIN data_out[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 35.510 0.000 35.790 4.000 ;
+    END
+  END data_out[3]
+  PIN dir
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
+    PORT
+      LAYER met2 ;
+        RECT 9.750 96.000 10.030 100.000 ;
+    END
+  END dir
+  PIN shift_amt[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
+    PORT
+      LAYER met2 ;
+        RECT 45.170 96.000 45.450 100.000 ;
+    END
+  END shift_amt[0]
+  PIN shift_amt[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
+    PORT
+      LAYER met3 ;
+        RECT 96.000 44.240 100.000 44.840 ;
+    END
+  END shift_amt[1]
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 94.300 87.125 ;
+      LAYER met1 ;
+        RECT 0.070 10.640 95.150 87.280 ;
+      LAYER met2 ;
+        RECT 0.100 95.720 9.470 96.000 ;
+        RECT 10.310 95.720 44.890 96.000 ;
+        RECT 45.730 95.720 80.310 96.000 ;
+        RECT 81.150 95.720 95.130 96.000 ;
+        RECT 0.100 4.280 95.130 95.720 ;
+        RECT 0.650 4.000 35.230 4.280 ;
+        RECT 36.070 4.000 70.650 4.280 ;
+        RECT 71.490 4.000 95.130 4.280 ;
+      LAYER met3 ;
+        RECT 3.990 82.640 96.000 87.205 ;
+        RECT 3.990 81.240 95.600 82.640 ;
+        RECT 3.990 75.840 96.000 81.240 ;
+        RECT 4.400 74.440 96.000 75.840 ;
+        RECT 3.990 45.240 96.000 74.440 ;
+        RECT 3.990 43.840 95.600 45.240 ;
+        RECT 3.990 38.440 96.000 43.840 ;
+        RECT 4.400 37.040 96.000 38.440 ;
+        RECT 3.990 7.840 96.000 37.040 ;
+        RECT 3.990 6.975 95.600 7.840 ;
+  END
+END barrel_shifter
+END LIBRARY
+
