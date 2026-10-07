@@ -1,0 +1,19 @@
+Design Name: johnson_counter
+Run Directory: /openlane/designs/johnson_counter/runs/RUN_2026.10.07_12.23.57
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/johnson_counter/runs/RUN_2026.10.07_12.23.57/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/johnson_counter/runs/RUN_2026.10.07_12.23.57/logs/signoff/43-johnson_counter.lef.lvs.log
+Number of nets: 21                         |Number of nets: 21                         
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/johnson_counter/runs/RUN_2026.10.07_12.23.57/logs/signoff/45-arc.log
+Pin violations: 0
+Net violations: 0

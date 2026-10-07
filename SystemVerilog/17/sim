@@ -1,0 +1,78 @@
+#! /usr/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib64/ivl/system.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib64/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib64/ivl/va_math.vpi";
+:vpi_module "/usr/lib64/ivl/v2009.vpi";
+S_0x563b9c246c70 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x563b9c246e00 .scope module, "tb_johnson_counter" "tb_johnson_counter" 3 4;
+ .timescale -9 -12;
+v0x563b9c259740_0 .var "clk", 0 0;
+v0x563b9c259810_0 .net "q", 3 0, v0x563b9c259540_0;  1 drivers
+v0x563b9c2598e0_0 .var "rst_n", 0 0;
+S_0x563b9c20c550 .scope module, "dut" "johnson_counter" 3 10, 4 4 0, S_0x563b9c246e00;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst_n";
+    .port_info 2 /OUTPUT 4 "q";
+v0x563b9c20c750_0 .net "clk", 0 0, v0x563b9c259740_0;  1 drivers
+v0x563b9c259540_0 .var "q", 3 0;
+v0x563b9c259620_0 .net "rst_n", 0 0, v0x563b9c2598e0_0;  1 drivers
+E_0x563b9c247da0/0 .event negedge, v0x563b9c259620_0;
+E_0x563b9c247da0/1 .event posedge, v0x563b9c20c750_0;
+E_0x563b9c247da0 .event/or E_0x563b9c247da0/0, E_0x563b9c247da0/1;
+    .scope S_0x563b9c20c550;
+T_0 ;
+    %wait E_0x563b9c247da0;
+    %load/vec4 v0x563b9c259620_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v0x563b9c259540_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x563b9c259540_0;
+    %parti/s 3, 0, 2;
+    %load/vec4 v0x563b9c259540_0;
+    %parti/s 1, 3, 3;
+    %inv;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v0x563b9c259540_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x563b9c246e00;
+T_1 ;
+    %delay 5000, 0;
+    %load/vec4 v0x563b9c259740_0;
+    %inv;
+    %store/vec4 v0x563b9c259740_0, 0, 1;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x563b9c246e00;
+T_2 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563b9c259740_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563b9c2598e0_0, 0, 1;
+    %vpi_call/w 3 20 "$monitor", "%0t   |   %b   |   %b", $time, v0x563b9c259740_0, v0x563b9c259810_0 {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x563b9c2598e0_0, 0, 1;
+    %delay 100000, 0;
+    %vpi_call/w 3 30 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_johnson_counter.sv";
+    "johnson_counter.sv";

@@ -1,0 +1,8 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module johnson_counter...
+Warning: Wire johnson_counter.\q [3] is used but has no driver.
+Warning: Wire johnson_counter.\q [2] is used but has no driver.
+Warning: Wire johnson_counter.\q [1] is used but has no driver.
+Warning: Wire johnson_counter.\q [0] is used but has no driver.
+Found and reported 4 problems.
