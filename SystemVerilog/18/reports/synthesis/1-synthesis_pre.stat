@@ -1,0 +1,16 @@
+
+47. Printing statistics.
+
+=== d_ff ===
+
+   Number of wires:                  6
+   Number of wire bits:              6
+   Number of public wires:           6
+   Number of public wire bits:       6
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     $_DFFE_PN0P_                    1
+     $_SDFFE_PN0P_                   1
+

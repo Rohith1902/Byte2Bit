@@ -1,0 +1,19 @@
+Design Name: d_ff
+Run Directory: /openlane/designs/sync_async_dff/runs/RUN_2026.10.08_09.04.11
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/sync_async_dff/runs/RUN_2026.10.08_09.04.11/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/sync_async_dff/runs/RUN_2026.10.08_09.04.11/logs/signoff/43-d_ff.lef.lvs.log
+Number of nets: 21                         |Number of nets: 21                         
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/sync_async_dff/runs/RUN_2026.10.08_09.04.11/logs/signoff/45-arc.log
+Pin violations: 0
+Net violations: 0

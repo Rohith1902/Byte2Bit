@@ -1,0 +1,6 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module d_ff...
+Warning: Wire d_ff.\q_sync is used but has no driver.
+Warning: Wire d_ff.\q_async is used but has no driver.
+Found and reported 2 problems.
