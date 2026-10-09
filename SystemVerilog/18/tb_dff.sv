@@ -56,15 +56,7 @@ module tb_dff();
         #7;
         rst_n = 0;
         #2;
-        $display("%4t   |   %b       |     %b    |  %b      |   %b     |    %b",
-        $time,
-        rst_n,
-        en,
-        d,
-        q_async,
-        q_sync
-        );
-
+        $display("%4t   |   %b       |     %b    |  %b      |   %b     |    %b",$time,rst_n,en,d,q_async,q_sync);
         #2;
 
         rst_n = 1;

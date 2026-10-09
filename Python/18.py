@@ -14,7 +14,7 @@ def find_duplicates(arr):
         print(key, value)
 
     for i in count :
-        if count[i] > 1:
+        if count[id] > 1:
             duplicates.append(i)
 
     return duplicates
