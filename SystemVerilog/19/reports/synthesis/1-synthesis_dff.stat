@@ -1,0 +1,17 @@
+
+53. Printing statistics.
+
+=== shift_reg ===
+
+   Number of wires:                 13
+   Number of wire bits:             22
+   Number of public wires:           7
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 13
+     $_MUX_                          8
+     $_OR_                           1
+     sky130_fd_sc_hd__dfrtp_2        4
+

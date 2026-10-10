@@ -1,0 +1,22 @@
+
+{
+    "DESIGN_NAME": "shift_reg",
+
+    "VERILOG_FILES": [
+        "dir::shift_reg.sv"
+    ],
+
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 200 200",
+    "CORE_AREA": "10 10 190 190",
+
+    "PL_TARGET_DENSITY": 0.35,
+
+    "SYNTH_STRATEGY": "AREA 0",
+
+    "RUN_CTS": true,
+    "RUN_DRT": true
+}

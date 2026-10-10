@@ -1,0 +1,10 @@
+{
+    "DESIGN_NAME": "barrel_shifter",
+    "VERILOG_FILES": [
+        "dir::barrel_shift.sv"
+    ],
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 100 100",
+    "CLOCK_PORT": "",
+    "CLOCK_PERIOD": "10"
+}

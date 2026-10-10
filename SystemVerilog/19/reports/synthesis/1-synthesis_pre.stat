@@ -1,0 +1,17 @@
+
+47. Printing statistics.
+
+=== shift_reg ===
+
+   Number of wires:                  9
+   Number of wire bits:             18
+   Number of public wires:           7
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  9
+     $_DFFE_PN0P_                    4
+     $_MUX_                          4
+     $_OR_                           1
+
