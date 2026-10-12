@@ -1,0 +1,20 @@
+
+61. Printing statistics.
+
+=== piso_4bit ===
+
+   Number of wires:                 16
+   Number of wire bits:             19
+   Number of public wires:           8
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 12
+     sky130_fd_sc_hd__and2_2         1
+     sky130_fd_sc_hd__buf_1          4
+     sky130_fd_sc_hd__dfrtp_2        4
+     sky130_fd_sc_hd__mux2_2         3
+
+   Chip area for module '\piso_4bit': 161.404800
+

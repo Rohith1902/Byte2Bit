@@ -1,0 +1,5 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module piso_4bit...
+Warning: Wire piso_4bit.\serial_out is used but has no driver.
+Found and reported 1 problems.

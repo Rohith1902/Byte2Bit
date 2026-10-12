@@ -1,0 +1,19 @@
+Design Name: piso_4bit
+Run Directory: /openlane/designs/piso_4bit/runs/RUN_2026.10.12_14.21.51
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/piso_4bit/runs/RUN_2026.10.12_14.21.51/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/piso_4bit/runs/RUN_2026.10.12_14.21.51/logs/signoff/43-piso_4bit.lef.lvs.log
+Number of nets: 34                         |Number of nets: 34                         
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/piso_4bit/runs/RUN_2026.10.12_14.21.51/logs/signoff/45-arc.log
+Pin violations: 0
+Net violations: 0

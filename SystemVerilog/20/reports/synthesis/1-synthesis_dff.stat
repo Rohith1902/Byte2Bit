@@ -1,0 +1,17 @@
+
+53. Printing statistics.
+
+=== piso_4bit ===
+
+   Number of wires:                  7
+   Number of wire bits:             16
+   Number of public wires:           6
+   Number of public wire bits:      12
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  8
+     $_AND_                          1
+     $_MUX_                          3
+     sky130_fd_sc_hd__dfrtp_2        4
+
