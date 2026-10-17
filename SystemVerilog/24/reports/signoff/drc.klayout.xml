@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<report-database>
+    <categories/>
+    <cells>
+        <cell>
+            <name>decoder_3x8</name>
+        </cell>
+    </cells>
+    <items/>
+</report-database>

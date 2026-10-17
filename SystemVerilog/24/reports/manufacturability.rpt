@@ -1,0 +1,19 @@
+Design Name: decoder_3x8
+Run Directory: /home/rohith/OpenLane/designs/decoder_3x8/runs/RUN_2026.10.17_08.57.07
+----------------------------------------
+
+Magic DRC Summary:
+Source: /home/rohith/OpenLane/designs/decoder_3x8/runs/RUN_2026.10.17_08.57.07/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /home/rohith/OpenLane/designs/decoder_3x8/runs/RUN_2026.10.17_08.57.07/logs/signoff/37-decoder_3x8.lef.lvs.log
+Number of nets: 33                         |Number of nets: 33                         
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /home/rohith/OpenLane/designs/decoder_3x8/runs/RUN_2026.10.17_08.57.07/logs/signoff/39-arc.log
+Pin violations: 0
+Net violations: 0

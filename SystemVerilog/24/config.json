@@ -1,0 +1,18 @@
+{
+ "DESIGN_NAME" : "decoder_3x8",
+ "VERILOG_FILES" :  [
+    "dir::decoder_3x8.sv"
+ ],
+ "CLOCK_PORT" : "clk",
+ "CLOCK_PERIOD" : 10,
+ "FP_SIZING" : "absolute",
+ "DIE_AREA" : "0 0 90 90" ,
+ "PL_TARGET_DENSITY" : 0.75,
+ "RUN_CTS" : false,
+ "DIODE_INSERTION_STRATERGY" : "4",
+ "QUIT_ON_TIMING_VIOLATIONS" : true,
+ "QUIT_ON_MAGIC_DRC" : true,
+ "QUIT_ON_LVS_ERROR" : true
+
+
+}
