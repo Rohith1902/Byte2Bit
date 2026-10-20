@@ -1,0 +1,19 @@
+Design Name: lfsr
+Run Directory: /openlane/designs/lfsr_4bit/runs/RUN_2026.10.20_14.07.09
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/lfsr_4bit/runs/RUN_2026.10.20_14.07.09/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/lfsr_4bit/runs/RUN_2026.10.20_14.07.09/logs/signoff/43-lfsr.lef.lvs.log
+Number of nets: 21                         |Number of nets: 21                         
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/lfsr_4bit/runs/RUN_2026.10.20_14.07.09/logs/signoff/45-arc.log
+Pin violations: 0
+Net violations: 0

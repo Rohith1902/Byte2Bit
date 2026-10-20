@@ -1,0 +1,8 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module lfsr...
+Warning: Wire lfsr.\q [3] is used but has no driver.
+Warning: Wire lfsr.\q [2] is used but has no driver.
+Warning: Wire lfsr.\q [1] is used but has no driver.
+Warning: Wire lfsr.\q [0] is used but has no driver.
+Found and reported 4 problems.

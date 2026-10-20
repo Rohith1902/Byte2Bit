@@ -1,0 +1,20 @@
+{
+  "DESIGN_NAME"  : "lfsr",
+  "VERILOG_FILES" :[
+        "dir::lfsr.sv"
+  ],
+
+  "CLOCK_PORT" : "clk",
+  "CLOCK_PERIOD" : 10,
+  "FP_SIZING" : "absolute",
+  "DIE_AREA" : "0 0 90 90",
+  "PL_TARGET_DENSITY" : 0.55,
+  "RUN_CTS" : true,
+  "DIODE_INSERTION_STRATEGY" : 4,
+  "QUIT_ON_TIMING_VIOLATIONS" : false,
+  "QUIT_ON_LVS_ERROR" : false,
+  "QUIT_ON_DRC_ERROR" : false
+
+
+
+}
