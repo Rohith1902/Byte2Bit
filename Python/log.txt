@@ -1,0 +1,17 @@
+2026-10-21 09:15:22.104 [ERROR] [TestRunner] Assertion failed: Expected 200, but got 500
+2026-10-21 09:15:22.215 [ERROR] [LoginTest] AssertionError: Expected user status ACTIVE, but found INACTIVE
+2026-10-21 09:15:22.320 [ERROR] [PaymentTest] Assertion failed: Expected payment amount 1500.00, but got 1200.00
+2026-10-21 09:15:22.455 [ERROR] [ApiTest] AssertionError: Expected response body to contain "success", but it was missing
+2026-10-21 09:15:22.501 [ERROR] [DatabaseTest] Assertion failed: Expected 10 records, but found 8
+2026-10-21 09:15:22.678 [ERROR] [RegistrationTest] AssertionError: Expected email validation to return TRUE, but got FALSE
+2026-10-21 09:15:22.789 [ERROR] [UITest] Assertion failed: Expected button to be enabled, but it was disabled
+2026-10-21 09:15:22.890 [ERROR] [CheckoutTest] AssertionError: Expected total price 2500.00, but calculated 2750.00
+2026-10-21 09:15:23.011 [ERROR] [SessionTest] Assertion failed: Expected session timeout after 1800 seconds, but session remained active
+2026-10-21 09:15:23.125 [ERROR] [FileUploadTest] AssertionError: Expected uploaded file size 1024 KB, but got 0 KB
+2026-10-21 09:15:23.236 [ERROR] [SearchTest] Assertion failed: Expected 5 search results, but found 0
+2026-10-21 09:15:23.350 [ERROR] [OrderTest] AssertionError: Expected order status SHIPPED, but got PENDING
+
+2026-10-21 09:15:23.401 [INFO] [TestRunner] Total tests executed: 12
+2026-10-21 09:15:23.402 [INFO] [TestRunner] Passed: 0
+2026-10-21 09:15:23.403 [INFO] [TestRunner] Failed: 12
+2026-10-21 09:15:23.404 [INFO] [TestRunner] Test execution completed
