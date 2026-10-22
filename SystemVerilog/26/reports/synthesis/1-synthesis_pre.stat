@@ -1,0 +1,24 @@
+
+47. Printing statistics.
+
+=== rr_arbiter4 ===
+
+   Number of wires:                 27
+   Number of wire bits:             40
+   Number of public wires:           6
+   Number of public wire bits:      19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 32
+     $_ANDNOT_                       6
+     $_AND_                          3
+     $_DFFE_PN0N_                    3
+     $_DFF_PN0_                      4
+     $_MUX_                          3
+     $_NAND_                         2
+     $_NOR_                          2
+     $_NOT_                          4
+     $_ORNOT_                        1
+     $_OR_                           4
+

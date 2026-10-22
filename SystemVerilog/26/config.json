@@ -1,0 +1,17 @@
+{
+ "DESIGN_NAME" : "rr_arbiter4",
+ "VERILOG_FILES" : [
+    "dir::rr_arbiter4.sv"
+ ],
+
+ "CLOCK_PERIOD" : 10,
+ "CLOCK_PORT" : "clk",
+ "FP_SIZING" : "absolute",
+ "DIE_AREA" : "0 0 90 90",
+ "PL_TARGET_DENSITY" : 0.55,
+ "RUN_CTS" : true,
+ "DIODE_INSERTION_STRATEGY" : 4,
+ "QUIT_ON_DRC_ERROR" : false,
+ "QUIT_ON_TIMING_VIOLATIONS" : false,
+ "QUIT_ON_LVS_ERROR" : false
+}

@@ -1,0 +1,19 @@
+Design Name: rr_arbiter4
+Run Directory: /openlane/designs/arbiter_4/runs/RUN_2026.10.22_14.15.21
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/arbiter_4/runs/RUN_2026.10.22_14.15.21/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/arbiter_4/runs/RUN_2026.10.22_14.15.21/logs/signoff/43-rr_arbiter4.lef.lvs.log
+Number of nets: 47                         |Number of nets: 47                         
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/arbiter_4/runs/RUN_2026.10.22_14.15.21/logs/signoff/45-arc.log
+Pin violations: 0
+Net violations: 0

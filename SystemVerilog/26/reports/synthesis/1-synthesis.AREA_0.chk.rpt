@@ -1,0 +1,8 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module rr_arbiter4...
+Warning: Wire rr_arbiter4.\gnt [3] is used but has no driver.
+Warning: Wire rr_arbiter4.\gnt [2] is used but has no driver.
+Warning: Wire rr_arbiter4.\gnt [1] is used but has no driver.
+Warning: Wire rr_arbiter4.\gnt [0] is used but has no driver.
+Found and reported 4 problems.
