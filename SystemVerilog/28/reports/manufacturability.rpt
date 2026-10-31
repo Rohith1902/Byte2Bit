@@ -1,0 +1,19 @@
+Design Name: fifo
+Run Directory: /openlane/designs/fifo/runs/RUN_2026.10.31_12.53.25
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/fifo/runs/RUN_2026.10.31_12.53.25/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/fifo/runs/RUN_2026.10.31_12.53.25/logs/signoff/43-fifo.lef.lvs.log
+Number of nets: 459                        |Number of nets: 459                        
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/fifo/runs/RUN_2026.10.31_12.53.25/logs/signoff/45-arc.log
+Pin violations: 0
+Net violations: 0

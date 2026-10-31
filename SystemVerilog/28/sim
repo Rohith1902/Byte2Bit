@@ -1,0 +1,357 @@
+#! /usr/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib64/ivl/system.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib64/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib64/ivl/va_math.vpi";
+:vpi_module "/usr/lib64/ivl/v2009.vpi";
+S_0x5631930143e0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x563193014570 .scope module, "tb_fifo" "tb_fifo" 3 4;
+ .timescale -9 -12;
+P_0x563193005bd0 .param/l "DEPTH" 1 3 7, +C4<00000000000000000000000000001000>;
+P_0x563193005c10 .param/l "WIDTH" 1 3 8, +C4<00000000000000000000000000001000>;
+v0x563193046180_0 .var/i "check_full", 31 0;
+v0x563193046280_0 .var "clk", 0 0;
+v0x563193046340_0 .net "count", 3 0, v0x563193045240_0;  1 drivers
+v0x5631930463e0_0 .var "data_in", 7 0;
+v0x563193046480_0 .net "data_out", 7 0, v0x563193045400_0;  1 drivers
+v0x563193046570_0 .var/i "decision", 31 0;
+v0x563193046610_0 .net "empty", 0 0, L_0x563193056db0;  1 drivers
+v0x5631930466b0_0 .net "full", 0 0, L_0x563193057010;  1 drivers
+v0x563193046750_0 .var "pop", 0 0;
+v0x5631930467f0_0 .var "push", 0 0;
+v0x563193046890_0 .var "rst_n", 0 0;
+S_0x563192fd4550 .scope begin, "$ivl_for_loop0" "$ivl_for_loop0" 3 85, 3 85 0, S_0x563193014570;
+ .timescale -9 -12;
+v0x563193009e70_0 .var/2s "i", 31 0;
+E_0x563192fd4d20 .event posedge, v0x563193045180_0;
+E_0x56319300f050 .event negedge, v0x563193045180_0;
+S_0x5631930447d0 .scope begin, "$ivl_for_loop1" "$ivl_for_loop1" 3 110, 3 110 0, S_0x563193014570;
+ .timescale -9 -12;
+v0x56319300c120_0 .var/2s "i", 31 0;
+S_0x563193044a10 .scope module, "dut" "fifo" 3 22, 4 4 0, S_0x563193014570;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst_n";
+    .port_info 2 /INPUT 1 "push";
+    .port_info 3 /INPUT 1 "pop";
+    .port_info 4 /INPUT 8 "data_in";
+    .port_info 5 /OUTPUT 8 "data_out";
+    .port_info 6 /OUTPUT 1 "full";
+    .port_info 7 /OUTPUT 1 "empty";
+    .port_info 8 /OUTPUT 4 "count";
+P_0x563193014700 .param/l "DEPTH" 0 4 6, +C4<00000000000000000000000000001000>;
+P_0x563193014740 .param/l "WIDTH" 0 4 5, +C4<00000000000000000000000000001000>;
+L_0x563193006450 .functor AND 1, v0x5631930467f0_0, L_0x563193046960, C4<1>, C4<1>;
+L_0x563193009da0 .functor AND 1, v0x563193046750_0, L_0x563193046ad0, C4<1>, C4<1>;
+v0x563192fffdc0_0 .net *"_ivl_1", 0 0, L_0x563193046960;  1 drivers
+L_0x7f166b462018 .functor BUFT 1, C4<0000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x5631930007f0_0 .net *"_ivl_11", 27 0, L_0x7f166b462018;  1 drivers
+L_0x7f166b462060 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x563192fff0c0_0 .net/2u *"_ivl_12", 31 0, L_0x7f166b462060;  1 drivers
+v0x563192fff740_0 .net *"_ivl_16", 31 0, L_0x563193056f20;  1 drivers
+L_0x7f166b4620a8 .functor BUFT 1, C4<0000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x56319300a8c0_0 .net *"_ivl_19", 27 0, L_0x7f166b4620a8;  1 drivers
+L_0x7f166b4620f0 .functor BUFT 1, C4<00000000000000000000000000001000>, C4<0>, C4<0>, C4<0>;
+v0x563193044f00_0 .net/2u *"_ivl_20", 31 0, L_0x7f166b4620f0;  1 drivers
+v0x563193044fe0_0 .net *"_ivl_5", 0 0, L_0x563193046ad0;  1 drivers
+v0x5631930450a0_0 .net *"_ivl_8", 31 0, L_0x563193046c60;  1 drivers
+v0x563193045180_0 .net "clk", 0 0, v0x563193046280_0;  1 drivers
+v0x563193045240_0 .var "count", 3 0;
+v0x563193045320_0 .net "data_in", 7 0, v0x5631930463e0_0;  1 drivers
+v0x563193045400_0 .var "data_out", 7 0;
+v0x5631930454e0_0 .net "do_pop", 0 0, L_0x563193009da0;  1 drivers
+v0x5631930455a0_0 .net "do_push", 0 0, L_0x563193006450;  1 drivers
+v0x563193045660_0 .net "empty", 0 0, L_0x563193056db0;  alias, 1 drivers
+v0x563193045720_0 .net "full", 0 0, L_0x563193057010;  alias, 1 drivers
+v0x5631930457e0 .array "mem", 7 0, 7 0;
+v0x5631930458a0_0 .net "pop", 0 0, v0x563193046750_0;  1 drivers
+v0x563193045960_0 .net "push", 0 0, v0x5631930467f0_0;  1 drivers
+v0x563193045a20_0 .var "rd_ptr", 2 0;
+v0x563193045b00_0 .net "rst_n", 0 0, v0x563193046890_0;  1 drivers
+v0x563193045bc0_0 .var "wr_ptr", 2 0;
+E_0x56319300e060/0 .event negedge, v0x563193045b00_0;
+E_0x56319300e060/1 .event posedge, v0x563193045180_0;
+E_0x56319300e060 .event/or E_0x56319300e060/0, E_0x56319300e060/1;
+L_0x563193046960 .reduce/nor L_0x563193057010;
+L_0x563193046ad0 .reduce/nor L_0x563193056db0;
+L_0x563193046c60 .concat [ 4 28 0 0], v0x563193045240_0, L_0x7f166b462018;
+L_0x563193056db0 .cmp/eq 32, L_0x563193046c60, L_0x7f166b462060;
+L_0x563193056f20 .concat [ 4 28 0 0], v0x563193045240_0, L_0x7f166b4620a8;
+L_0x563193057010 .cmp/eq 32, L_0x563193056f20, L_0x7f166b4620f0;
+S_0x563193045dc0 .scope autotask, "pop_task" "pop_task" 3 54, 3 54 0, S_0x563193014570;
+ .timescale -9 -12;
+TD_tb_fifo.pop_task ;
+    %wait E_0x56319300f050;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5631930467f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x563193046750_0, 0, 1;
+    %vpi_func 3 58 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000011111111 {0 0 0};
+    %pad/u 8;
+    %store/vec4 v0x5631930463e0_0, 0, 8;
+    %wait E_0x563192fd4d20;
+    %delay 1000, 0;
+    %vpi_call/w 3 63 "$display", "POP : Data = %0h  |   count = %0d   ", v0x563193046480_0, v0x563193046340_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563193046750_0, 0, 1;
+    %end;
+S_0x563193045f50 .scope autotask, "push_task" "push_task" 3 40, 3 40 0, S_0x563193014570;
+ .timescale -9 -12;
+TD_tb_fifo.push_task ;
+    %wait E_0x56319300f050;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5631930467f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563193046750_0, 0, 1;
+    %vpi_func 3 44 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000011111111 {0 0 0};
+    %pad/u 8;
+    %store/vec4 v0x5631930463e0_0, 0, 8;
+    %wait E_0x563192fd4d20;
+    %delay 1000, 0;
+    %vpi_call/w 3 49 "$display", "PUSH : Data = %0h  |   count = %0d   ", v0x5631930463e0_0, v0x563193046340_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5631930467f0_0, 0, 1;
+    %end;
+    .scope S_0x563193044a10;
+T_2 ;
+    %wait E_0x56319300e060;
+    %load/vec4 v0x563193045b00_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %pushi/vec4 0, 0, 8;
+    %assign/vec4 v0x563193045400_0, 0;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v0x563193045a20_0, 0;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v0x563193045bc0_0, 0;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v0x563193045240_0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/vec4 v0x5631930455a0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.2, 8;
+    %load/vec4 v0x563193045320_0;
+    %load/vec4 v0x563193045bc0_0;
+    %pad/u 5;
+    %ix/vec4 3;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0x5631930457e0, 0, 4;
+    %load/vec4 v0x563193045bc0_0;
+    %addi 1, 0, 3;
+    %assign/vec4 v0x563193045bc0_0, 0;
+T_2.2 ;
+    %load/vec4 v0x5631930454e0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.4, 8;
+    %load/vec4 v0x563193045a20_0;
+    %pad/u 5;
+    %ix/vec4 4;
+    %load/vec4a v0x5631930457e0, 4;
+    %assign/vec4 v0x563193045400_0, 0;
+    %load/vec4 v0x563193045a20_0;
+    %addi 1, 0, 3;
+    %assign/vec4 v0x563193045a20_0, 0;
+T_2.4 ;
+    %load/vec4 v0x5631930455a0_0;
+    %load/vec4 v0x5631930454e0_0;
+    %concat/vec4; draw_concat_vec4
+    %dup/vec4;
+    %pushi/vec4 2, 0, 2;
+    %cmp/u;
+    %jmp/1 T_2.6, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 2;
+    %cmp/u;
+    %jmp/1 T_2.7, 6;
+    %load/vec4 v0x563193045240_0;
+    %assign/vec4 v0x563193045240_0, 0;
+    %jmp T_2.9;
+T_2.6 ;
+    %load/vec4 v0x563193045240_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v0x563193045240_0, 0;
+    %jmp T_2.9;
+T_2.7 ;
+    %load/vec4 v0x563193045240_0;
+    %subi 1, 0, 4;
+    %assign/vec4 v0x563193045240_0, 0;
+    %jmp T_2.9;
+T_2.9 ;
+    %pop/vec4 1;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x563193014570;
+T_3 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563193046280_0, 0, 1;
+    %end;
+    .thread T_3;
+    .scope S_0x563193014570;
+T_4 ;
+    %delay 5000, 0;
+    %load/vec4 v0x563193046280_0;
+    %inv;
+    %store/vec4 v0x563193046280_0, 0, 1;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_0x563193014570;
+T_5 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563193046890_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5631930467f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563193046750_0, 0, 1;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x5631930463e0_0, 0, 8;
+    %pushi/vec4 2, 0, 32;
+T_5.0 %dup/vec4;
+    %cmpi/s 0, 0, 32;
+    %jmp/1xz T_5.1, 5;
+    %jmp/1 T_5.1, 4;
+    %subi 1, 0, 32;
+    %wait E_0x563192fd4d20;
+    %jmp T_5.0;
+T_5.1 ;
+    %pop/vec4 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x563193046890_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call/w 3 80 "$display", "PUSH OPERATION" {0 0 0};
+    %vpi_call/w 3 81 "$display", "Write Pointer : %b   |  Read Pointer : %b\012", v0x563193045bc0_0, v0x563193045a20_0 {0 0 0};
+    %vpi_call/w 3 82 "$display", "Index  |  Data stored  |  is full  | is empty   " {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5631930467f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563193046750_0, 0, 1;
+    %fork t_1, S_0x563192fd4550;
+    %jmp t_0;
+    .scope S_0x563192fd4550;
+t_1 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x563193009e70_0, 0, 32;
+T_5.2 ; Top of for-loop
+    %load/vec4 v0x563193009e70_0;
+    %cmpi/s 8, 0, 32;
+	  %jmp/0xz T_5.3, 5;
+    %wait E_0x56319300f050;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5631930467f0_0, 0, 1;
+    %load/vec4 v0x563193009e70_0;
+    %pad/s 8;
+    %store/vec4 v0x5631930463e0_0, 0, 8;
+    %wait E_0x563192fd4d20;
+    %delay 1000, 0;
+    %vpi_call/w 3 91 "$display", " %0d    |    %h   |   %b    |   %b  |  %0d  ", v0x563193009e70_0, v0x5631930463e0_0, v0x5631930466b0_0, v0x563193046610_0, v0x563193046340_0 {0 0 0};
+T_5.4 ; for-loop step statement
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x563193009e70_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %cast2;
+    %store/vec4 v0x563193009e70_0, 0, 32;
+    %jmp T_5.2;
+T_5.3 ; for-loop exit label
+    %end;
+    .scope S_0x563193014570;
+t_0 %join;
+    %vpi_call/w 3 96 "$display", "Write Pointer : %b   |  Read Pointer : %b\012", v0x563193045bc0_0, v0x563193045a20_0 {0 0 0};
+    %vpi_call/w 3 100 "$display", "POP OPERATION" {0 0 0};
+    %vpi_call/w 3 102 "$display", "Write Pointer : %b   |  Read Pointer : %b\012", v0x563193045bc0_0, v0x563193045a20_0 {0 0 0};
+    %vpi_call/w 3 103 "$display", "Index  |  Data stored  |  is full  | is empty   " {0 0 0};
+    %wait E_0x56319300f050;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5631930467f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x563193046750_0, 0, 1;
+    %fork t_3, S_0x5631930447d0;
+    %jmp t_2;
+    .scope S_0x5631930447d0;
+t_3 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x56319300c120_0, 0, 32;
+T_5.5 ; Top of for-loop
+    %load/vec4 v0x56319300c120_0;
+    %cmpi/s 8, 0, 32;
+	  %jmp/0xz T_5.6, 5;
+    %wait E_0x563192fd4d20;
+    %delay 1000, 0;
+    %vpi_call/w 3 116 "$display", " %0d    |    %h   |   %b    |   %b   |   %0d    ", v0x56319300c120_0, v0x563193046480_0, v0x5631930466b0_0, v0x563193046610_0, v0x563193046340_0 {0 0 0};
+T_5.7 ; for-loop step statement
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x56319300c120_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %cast2;
+    %store/vec4 v0x56319300c120_0, 0, 32;
+    %jmp T_5.5;
+T_5.6 ; for-loop exit label
+    %end;
+    .scope S_0x563193014570;
+t_2 %join;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x563193046750_0, 0, 1;
+    %vpi_call/w 3 119 "$display", "Write Pointer : %b   |  Read Pointer : %b\012", v0x563193045bc0_0, v0x563193045a20_0 {0 0 0};
+    %vpi_call/w 3 124 "$display", "Random Checking" {0 0 0};
+    %wait E_0x56319300f050;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5631930467f0_0, 0, 1;
+    %vpi_func 3 127 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000011111111 {0 0 0};
+    %pad/u 8;
+    %store/vec4 v0x5631930463e0_0, 0, 8;
+    %vpi_call/w 3 128 "$display", "Data   |    count  " {0 0 0};
+    %vpi_call/w 3 129 "$display", "   %h   |   %0d    ", v0x5631930463e0_0, v0x563193046340_0 {0 0 0};
+    %vpi_call/w 3 133 "$display", "Random push pop " {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x563193046180_0, 0, 32;
+T_5.8 ;
+    %load/vec4 v0x5631930466b0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz T_5.9, 8;
+    %vpi_func 3 136 "$urandom_range" 32, 32'sb00000000000000000000000000000000, 32'sb00000000000000000000000000000001 {0 0 0};
+    %store/vec4 v0x563193046570_0, 0, 32;
+    %load/vec4 v0x563193046180_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x563193046180_0, 0, 32;
+    %load/vec4 v0x563193046570_0;
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_5.10, 4;
+    %alloc S_0x563193045f50;
+    %fork TD_tb_fifo.push_task, S_0x563193045f50;
+    %join;
+    %free S_0x563193045f50;
+    %jmp T_5.11;
+T_5.10 ;
+    %alloc S_0x563193045dc0;
+    %fork TD_tb_fifo.pop_task, S_0x563193045dc0;
+    %join;
+    %free S_0x563193045dc0;
+T_5.11 ;
+    %load/vec4 v0x563193046180_0;
+    %cmpi/e 100, 0, 32;
+    %jmp/0xz  T_5.12, 4;
+    %vpi_call/w 3 144 "$display", "Queue didn't fill " {0 0 0};
+    %jmp T_5.9; break
+T_5.12 ;
+    %jmp T_5.8;
+T_5.9 ;
+    %vpi_call/w 3 149 "$finish" {0 0 0};
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_fifo.sv";
+    "fifo.sv";
