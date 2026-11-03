@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Verilog Hardware Design Journal</title>
+    <!-- Tailwind CSS for layout styling -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- Three.js for 3D graphics rendering -->
+    <script src="https://cloudflare.com"></script>
+    <!-- Prism.js for clean Verilog syntax highlighting -->
+    <link href="https://cloudflare.com" rel="stylesheet" />
+    <script src="https://cloudflare.com"></script>
+    <script src="https://cloudflare.com"></script>
+    <!-- Vanilla Tilt for 3D card tilt animation effects -->
+    <script src="https://cloudflare.com"></script>
+    <style>
+        body { background-color: #05070f; overflow-x: hidden; }
+        #canvas3d { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; }
+        .glass-card {
+            background: rgba(13, 18, 36, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transform-style: preserve-3d;
+        }
+        .inner-3d { transform: translateZ(40px); }
+    </style>
+</head>
+<body class="text-slate-100 font-sans min-h-screen">
+
+    <!-- 3D Canvas Context Background -->
+    <canvas id="canvas3d"></canvas>
+
+    <!-- Header Section -->
+    <header class="border-b border-slate-800/80 bg-slate-950/60 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 uppercase animate-pulse">
+                    RTL Design Space
+                </h1>
+                <p class="text-xs text-cyan-400 font-mono mt-1">// Daily SystemVerilog Circuit Logs & Verification</p>
+            </div>
+
+            <!-- Category Filtering Nodes -->
+            <div class="flex gap-2 text-xs font-mono">
+                <button onclick="filterCategory('all')" class="filter-btn px-3 py-2 rounded border border-cyan-500 bg-cyan-950/50 text-cyan-300 transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.15)]">ALL_UNITS</button>
+                <button onclick="filterCategory('arbiter')" class="filter-btn px-3 py-2 rounded border border-slate-800 bg-slate-900/40 text-slate-400 hover:border-slate-700 transition-all">ARBITERS</button>
+                <button onclick="filterCategory('fifo')" class="filter-btn px-3 py-2 rounded border border-slate-800 bg-slate-900/40 text-slate-400 hover:border-slate-700 transition-all">FIFOS</button>
+                <button onclick="filterCategory('uart')" class="filter-btn px-3 py-2 rounded border border-slate-800 bg-slate-900/40 text-slate-400 hover:border-slate-700 transition-all">UART</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Engine -->
+    <main class="max-w-5xl mx-auto px-4 py-12 relative z-10">
+        <div class="space-y-12">
+
+            <!-- LOG ENTRY: DAY 2 (UART SIMULATION FIX) -->
+            <div class="journal-card glass-card rounded-2xl p-6 shadow-2xl transition-shadow hover:shadow-cyan-900/20" data-category="uart" data-tilt data-tilt-max="7" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="inner-3d">
+                    <div class="flex flex-wrap justify-between items-start gap-2 border-b border-slate-800/80 pb-4 mb-4">
+                        <div>
+                            <span class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 tracking-widest uppercase">UART_TX</span>
+                            <h2 class="text-xl font-bold text-white mt-2 tracking-tight">Day 2: UART Transmitter Simulation & Baud Rate Engine</h2>
+                        </div>
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-950/30 border border-cyan-900/50 px-3 py-1 rounded">2026-10-31</span>
+                    </div>
+
+                    <!-- 10 Lines Technical Overview -->
+                    <div class="text-slate-300 text-sm leading-relaxed space-y-3 mb-6 font-light">
+                        <p><strong>Design Procedure & Architecture:</strong> Developed a modular UART transmitter component structured around a deterministic finite state machine (IDLE, START, DATA, STOP) and a parallel-in, serial-out shifting array register matrix. Calculated dynamic baud rate divisor counters based on a variable clock metric to scale tracking behavior across varying physical logic parameters.</p>
+                        <p><strong>Work Done Regularly & Verification:</strong> Fixed a high-priority bug causing simulator execution freezes within my custom verification testbench loop constructs. Stabilized monitoring tracking processes by ensuring proper synchronization of clock edges before sampling status indicators. Rectified premature functional exit states to provide thorough edge verification over data streams.</p>
+                    </div>
+
+                    <!-- Code Snippet Terminal -->
+                    <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950/80 text-sm">
+                        <div class="bg-slate-950 px-4 py-2 text-xs text-slate-400 font-mono flex justify-between items-center border-b border-slate-800/60">
+                            <span>uart_tx.sv</span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 shadow-[0_0_8px_#06b6d4]"></span>
+                        </div>
+                        <pre><code class="language-verilog">module uart_tx #(parameter CLK_PER_BIT = 87) (
+    input  logic       clk,
+    input  logic       rst_n,
+    input  logic [7:0] tx_data,
+    input  logic       tx_start,
+    output logic       tx_serial,
+    output logic       tx_done
+);
+    // 3D dashboard ready structural finite state machine implementation
+endmodule</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOG ENTRY: DAY 1 (FIFO RAM STACK) -->
+            <div class="journal-card glass-card rounded-2xl p-6 shadow-2xl transition-shadow hover:shadow-cyan-900/20" data-category="fifo" data-tilt data-tilt-max="7" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="inner-3d">
+                    <div class="flex flex-wrap justify-between items-start gap-2 border-b border-slate-800/80 pb-4 mb-4">
+                        <div>
+                            <span class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 tracking-widest uppercase">FIFO_SYNC</span>
+                            <h2 class="text-xl font-bold text-white mt-2 tracking-tight">Day 1: Synchronous FIFO Pointer Evaluation & Array Arrays</h2>
+                        </div>
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-950/30 border border-cyan-900/50 px-3 py-1 rounded">2026-10-30</span>
+                    </div>
+
+                    <!-- 10 Lines Technical Overview -->
+                    <div class="text-slate-300 text-sm leading-relaxed space-y-3 mb-6 font-light">
+                        <p><strong>Design Procedure & Architecture:</strong> Constructed a multi-depth synchronous FIFO storage subsystem utilizing an independent internal dual-port RAM register memory array. Developed tracking operational pointer logic circuits governing active read address spaces and active write address channels, establishing clear condition checks via internal numeric offset vectors.</p>
+                        <p><strong>Work Done Regularly & Verification:</strong> Built an object-oriented testbench verification framework executing randomized algorithmic write sequences to hit extreme structural stress metrics. Traced behavioral tracking bounds for inner pointer arrays during continuous memory read cycles. Resolved functional coverage tracking gaps by checking array allocation arrays across conditions.</p>
+                    </div>
+
+                    <!-- Code Snippet Terminal -->
+                    <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950/80 text-sm">
+                        <div class="bg-slate-950 px-4 py-2 text-xs text-slate-400 font-mono flex justify-between items-center border-b border-slate-800/60">
+                            <span>tb_fifo.sv</span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]"></span>
+                        </div>
+                        <pre><code class="language-verilog">initial begin
+    // Driving continuous randomized system sequences into FIFO storage pipelines
+    for(int i = 0; i < 8; i++) begin
+        #5;
+        push = 1;
+        data_in[i] = $urandom_range(0, 255);
+    end
+    #10;
+    push = 0;
+end</code></pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3D Graphics Engine & Interaction Systems -->
+    <script>
+        // --- THREE.JS MATRIX BACKGROUND SYSTEM ---
+        const canvas = document.querySelector('#canvas3d');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+

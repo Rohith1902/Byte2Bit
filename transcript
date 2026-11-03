@@ -1,0 +1,38 @@
+# Reading pref.tcl
+# Loading project Experiment_3
+# reading /mnt/Data/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project apb
+# Compile of apb.sv was successful.
+vsim -gui work.apb
+# vsim -gui work.apb 
+# Start time: 19:02:01 on Nov 03,2026
+# Loading sv_std.std
+# Loading work.apb
+add wave -position insertpoint  \
+sim:/apb/pslverr
+add wave -position insertpoint  \
+sim:/apb/STATUS
+add wave -position insertpoint  \
+sim:/apb/CTRL \
+sim:/apb/STATUS \
+sim:/apb/DATA \
+sim:/apb/SCRATCH \
+sim:/apb/pclk \
+sim:/apb/preset \
+sim:/apb/psel \
+sim:/apb/penable \
+sim:/apb/pwrite \
+sim:/apb/paddr \
+sim:/apb/pwdata \
+sim:/apb/pready \
+sim:/apb/pslverr \
+sim:/apb/prdata \
+sim:/apb/ctrl_reg \
+sim:/apb/status_reg \
+sim:/apb/data_reg \
+sim:/apb/scratch_reg \
+sim:/apb/data_wait_seen
+run
+run
+run
+run
