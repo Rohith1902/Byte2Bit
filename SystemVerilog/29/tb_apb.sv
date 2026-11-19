@@ -14,6 +14,8 @@ module tb_apb();
     logic [31:0] prdata;
     logic [31:0] expected;
 
+    logic [31:0] ref_model [0:3];
+
     apb dut(
         .pclk(pclk),
         .preset(preset),
@@ -27,7 +29,7 @@ module tb_apb();
         .prdata(prdata)
     );
 
-    taks automatic apb_reset();
+    task automatic apb_reset();
         begin
             preset = 0;
 
@@ -84,6 +86,9 @@ module tb_apb();
             do begin
                 @(negedge pclk);
             end while (!pready);
+
+            case(addr)
+                8'h00 : ref_model[0] = data;
 
             if(pslverr)
                 $display("[WRITE ERROR] Address : %h Data : %h",addr,data);
@@ -144,6 +149,30 @@ module tb_apb();
 
         end
     endtask
+
+    initial begin 
+
+        pclk = 0;
+        forever #5 pclk = pclk;
+
+
+        preset = 1'b0;
+        psel = 1'b0;
+        penable = 1'b0;
+        pwrite = 1'b0;
+        paddr = 8'h00;
+        pwdata = 32'h0;
+
+        //RESET TEST
+        apb_reset();
+
+        //BASIC REGISTER TESTS
+
+        apb_write(8'h00,32'h12345678);
+        apb_read(8'h00,32'h12345678);
+
+
+    end         
 
 
         
